@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  python-tesseract:
+    container_name: python-tesseract
+    build: .
+    volumes:
+      - .:/code
+    command: tesseract /code/samples/hangul.jpg /code/output -l kor preserve-interword_space=1
